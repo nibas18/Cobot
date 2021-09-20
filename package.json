@@ -1,0 +1,26 @@
+{
+  "name": "cobot",
+  "version": "1.0.0",
+  "description": "bachelorproject",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^14.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nibas18/Cobot.git"
+  },
+  "keywords": [
+    "bachelorproject"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nibas18/Cobot/issues"
+  },
+  "homepage": "https://github.com/nibas18/Cobot#readme"
+}
