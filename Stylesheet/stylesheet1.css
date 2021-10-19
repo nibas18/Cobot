@@ -76,4 +76,8 @@ body{
 .login_content .login_btn{
     margin-top: 30px;
 }
+body {
+   text-align: center;
+}
+
 /**Sign Up Page**/
