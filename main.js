@@ -6,7 +6,7 @@ function createWindow() {
     })
     const electron = require('electron')
     require('electron-reload')(__dirname);
-    win.loadFile('Html/index.html')
+    win.loadFile('index.html')
 }
 app.whenReady().then(() => {
     createWindow()
