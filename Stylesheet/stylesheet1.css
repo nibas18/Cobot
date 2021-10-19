@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    font-size: 18px;
+    color: black;
+}
+/**Starting Page**/
+.content{
+    border-radius: 6px;
+    width: 1000px;
+    height: 574px;
+    margin-left: 6.1%;
+    margin-right: auto;
+    margin-top: 26px;
+}
+.logo_img{
+    margin-left: 25%;
+    margin-top: 8%;
+ }
+.login_btn, .signup_btn{
+    width: 240px;
+    height: 42px;
+    margin-top: 24px;
+    margin-left: 44%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 19px;
+}
+.login_btn{
+    background-image: linear-gradient(to right, #1d1789, #6b3694);
+    border: 1px solid #6b3694;
+    color: white;
+}
+.signup_btn{
+    border-width: 3px;
+    border-radius: 6px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #1d1789, #6b3694) 2 20%;
+    background-color: #fff;
+}
+/**Login Page**/
+.login_container, .login_container .l_img{
+    margin-left: 5%;
+}
+.l_img .logo_img{
+    position: absolute;
+    width: 400px;
+    height: 140px;
+    left: 10px;
+    top: -35px;
+}
+.login_content{
+    margin-top: 220px;
+}
+
+.login_content .input_id, .login_content .input_pass {
+    width: 489px;
+    height: 27px;
+    margin-left: 300px;
+    margin-bottom: 26px;
+    border: 2px solid #1d1789;
+    border-radius: 3px;
+}
+
+.login_content label{
+    margin-left: 300px;
+}
+.forgot{
+    margin-left: 300px;
+    margin-bottom: 26px;
+}
+
+.login_content .login_btn, .login_content p{
+    margin-left: 450px;
+}
+.login_content .login_btn{
+    margin-top: 30px;
+}
+/**Sign Up Page**/

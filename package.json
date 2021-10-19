@@ -4,7 +4,8 @@
   "description": "bachelorproject",
   "main": "main.js",
   "dependencies": {
-    "electron": "^14.0.1"
+    "electron": "^14.1.1",
+    "electron-reload": "^2.0.0-alpha.1"
   },
   "devDependencies": {},
   "scripts": {
