@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SignUp Page</title>
-        <link rel="stylesheet" href="/Stylesheet/stylesheet1.css"/>
-    </head>
-    <body>
-        <i class="fas fa-arrow-left"></i>
-        <img class="logo_img" src="/images/logo.png" width="600px" height="230px"/><br>
 
-        <label>Personal ID:</label><br>
-        <input class="input_id" type="text" placeholder="Enter Your Personal ID Here..."/><br>
+<head>
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="/Stylesheet/stylesheet1.css" />
+</head>
 
-        <label>Email:</label><br>
-        <input class="input_email" type="text" placeholder="Enter Your Email Here..."/><br>
+<body>
+    <i class="fas fa-arrow-left"></i>
+    <img class="logo_img" src="/images/logo.png" width="600px" height="230px" /><br>
 
-        <label>Password:</label><br>
-        <input class="input_pass" type="password" placeholder="Enter Your Password Here..."/><br>
-        
-        <label>Confirm Password:</label><br>
-        <input class="input_pass" type="password" placeholder="Enter Your Password Here..."/><br>
+    <label>Personal ID:</label><br>
+    <input class="input_id" type="text" placeholder="Enter Your Personal ID Here..." /><br>
 
-        <button class="signup_btn">Sign Up</button><br>
-        <p>Already have an account? <a href="">Login?</a></p>
-    
-    </body>
+    <label>Email:</label><br>
+    <input class="input_email" type="text" placeholder="Enter Your Email Here..." /><br>
+
+    <label>Password:</label><br>
+    <input class="input_pass" type="password" placeholder="Enter Your Password Here..." /><br>
+
+    <label>Confirm Password:</label><br>
+    <input class="input_pass" type="password" placeholder="Enter Your Password Here..." /><br>
+
+    <button class="signup_btn">Sign Up</button><br>
+
+    <div style="display: flex; align-items: center;">
+        <p>Already have an account?</p>
+        <form action="login-page.html">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+
+</body>
+
 </html>
