@@ -2,13 +2,13 @@
 <html>
     <head>
         <title>Login Page</title>
-        <link rel="stylesheet" href="/Stylesheet/stylesheet1.css"/>
+        <link rel="stylesheet" href="../Stylesheet/stylesheet1.css"/>
     </head>
     <body>
     <div class="login_container">
         <i class="fas fa-arrow-left"></i>
         <div class="l_img">
-            <img class="logo_img" src="/images/logo.png" width="600px" height="230px"/>
+            <img class="logo_img" src="../images/logo.png" width="600px" height="230px"/>
         </div>
 
         <div class="login_content">
@@ -17,10 +17,16 @@
 
         <label>Password:</label><br>
         <input class="input_pass" type="password" placeholder="   Enter Your Password Here . . ."/><br>
-        <a class="forgot" href="">Forgot password?</a><br>
 
-        <button id="login_form_btn" class="login_btn">Login</button><br>
-        <p class="reminder_donthave">Don't have an account? <a href="">Sign Up?</a></p>
+        <form action="forgotpassword-page.html"> 
+            <input type="submit" value="Forgot password?"> 
+        </form><br>
+
+            <p>Don't have an account?</p>
+            <form action="signup-page.html">
+                <input class="login_btn"  type="submit" value="Sign Up">
+            </form>
+
         </div>
     </div>
     </body>
