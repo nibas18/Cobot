@@ -4,6 +4,7 @@ body{
     font-family: Roboto;
     font-size: 18px;
     color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 /**Starting Page**/
 .content{
@@ -60,6 +61,8 @@ body{
     margin-bottom: 26px;
     border: 2px solid #1d1789;
     border-radius: 3px;
+    font-family:'Trebuchet MS';
+    font-size: 15px;
 }
 
 .login_content label{
@@ -68,6 +71,7 @@ body{
 .forgot{
     margin-left: 300px;
     margin-bottom: 26px;
+    color: #1d1789;
 }
 
 .login_content .login_btn, .login_content p{
@@ -76,4 +80,54 @@ body{
 .login_content .login_btn{
     margin-top: 30px;
 }
+#login_form_btn{
+    background-image: linear-gradient(to right, #1d1789, #6b3694);
+    border: 2px solid white;
+    height: 48px;
+    color: white;
+    box-shadow: 2px 2px #1d1789;
+    margin-top: 2px;
+    border-radius: 6px;
+}
+.reminder_donthave a{
+    color: #1d1789;
+}
 /**Sign Up Page**/
+.logo{
+    width: 400px;
+    height: 170px;
+    margin-top: 30px;
+    margin-left: 312px
+}
+.signup_label{
+    color: #1d1789;
+}
+.signup_label, .signup_input{
+    margin-left: 350px;
+}
+.signup_input{
+    width: 481px;
+    height: 27px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    border: 3px solid #c4c4c4;
+    font-family:'Trebuchet MS';
+}
+#signup_form_btn{    
+    background-image: linear-gradient(to right, #1d1789, #6b3694);
+    border: 2px solid white;
+    margin-left: 485px;
+    height: 48px;
+    color: white;
+    box-shadow: 2px 2px #1d1789;
+    margin-top: 2px;
+}
+.reminder_alreadyhave{
+    margin-left: 478px;
+}
+.reminder_alreadyhave a{
+    color:#1d1789;
+}
+
+/**Sign Up Page**/
+
