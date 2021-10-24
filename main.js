@@ -6,7 +6,7 @@ function createWindow() {
     });
     const electron = require('electron');
     require('electron-reload')(__dirname);
-    win.loadFile('..Html/forgotpassword-page.html');
+    win.loadFile('Html/starting-page.html');
 }
 
 app.whenReady().then(() => {
