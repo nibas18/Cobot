@@ -13,19 +13,38 @@
 
         <div class="login_content">
         <label>Personal ID:</label><br>
-        <input class="input_id" type="text" placeholder="   Enter Your Personal ID Here . . ."/><br>
+        <input id="personalid" class="input_id" type="text" placeholder="   Enter Your Personal ID Here . . ."/><br>
 
         <label>Password:</label><br>
-        <input class="input_pass" type="password" placeholder="   Enter Your Password Here . . ."/><br>
+        <input id="password" class="input_pass" type="password" placeholder="   Enter Your Password Here . . ."/><br>
 
         <form action="forgotpassword-page.html"> 
             <input type="submit" value="Forgot password?"> 
         </form><br>
-
+        <!--
             <p>Don't have an account?</p>
             <form action="signup-page.html">
                 <input class="login_btn"  type="submit" value="Sign Up">
             </form>
+        -->
+            <p>Don't have an account? <a href="signup-page.html">Sign Up</a></p>
+            <button id="login" class="login_btn">Login</button>
+            <div id="text"></div>
+
+        <script>
+            document.getElementById("login").addEventListener("click", function() {
+                let personalid = document.getElementById("personalid").value;
+                let password = document.getElementById("password").value;
+
+                if(personalid !== "" && password !== ""){
+                    document.getElementById("text").innerHTML = JSON.stringify(personalid+ " " +password+ " ");
+                }else{
+                    document.getElementById("text").innerHTML = "The values are incomplete";
+                }
+
+                document.getElementById("demo").innerHTML = "Hello World";
+            });
+        </script>
 
         </div>
     </div>
