@@ -134,15 +134,15 @@ class Robot extends Behaviour {
             case state.idle:
                 break;
             case state.activated:
-                if (isPointInRange(this.movement.target.position, this.entity.position, 0.2)) {
+                if (isPointInRange(this.movement.target.position, this.entity.position, 0.3)) {
                     this.state = state.cleaning;
                     this.cleaningTimer = timeToClean;
                 }
                 break;
             case state.returning:
-                if (isPointInRange(this.movement.target.position, this.entity.position, 0.2)) {
-                    this.movement.target = null;
+                if (isPointInRange(this.movement.target.position, this.entity.position, 0.3)) {
                     this.state = idle;
+                    this.movement.target = null;
                 }
                 break;
             case state.cleaning:
@@ -164,7 +164,7 @@ class Robot extends Behaviour {
 
 }
 
-let dirtyDelay = { min: 3000, max: 8000 }
+let dirtyDelay = { min: 3000, max: 16000 }
 class Table extends Behaviour {
 
     constructor() {
