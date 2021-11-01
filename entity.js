@@ -134,14 +134,14 @@ class Robot extends Behaviour {
             case state.idle:
                 break;
             case state.activated:
-                if (isPointInRange(this.movement.target.position, this.entity.position, 0.3)) {
+                if (isPointInRange(this.movement.target.position, this.entity.position, 0.4)) {
                     this.state = state.cleaning;
                     this.cleaningTimer = timeToClean;
                 }
                 break;
             case state.returning:
-                if (isPointInRange(this.movement.target.position, this.entity.position, 0.3)) {
-                    this.state = idle;
+                if (isPointInRange(this.movement.target.position, this.entity.position, 0.4)) {
+                    this.state = state.idle;
                     this.movement.target = null;
                 }
                 break;
