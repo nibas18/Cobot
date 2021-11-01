@@ -75,8 +75,8 @@ function getRobots() {
             let position = new Vector2Scale(restingPoint.scaleX, restingPoint.scaleY);
             let spriteRenderer = new SpriteRenderer("../images/Armature_Idle_00.png", 0.1);
             let movement = new Movement(0.2);
-            movement.target = entities[i];
-            let entity = new Entity(position, [spriteRenderer, movement]);
+            let robotBrain = new Robot(movement);
+            let entity = new Entity(position, [spriteRenderer, movement, robotBrain]);
 
             idlingRobots.push(entity);
             entity.awake();
@@ -93,8 +93,7 @@ function getPoints() {
         let position = new Vector2Scale(point.position.x, point.position.y);
         let spriteRenderer = new SpriteRenderer("../images/table_img.png", 0.1);
         let table = new Table();
-        let robot = new Robot();
-        let entity = new Entity(position, [spriteRenderer, table, robot]);
+        let entity = new Entity(position, [spriteRenderer, table]);
 
         entity.awake();
         entities.push(entity);
@@ -103,4 +102,8 @@ function getPoints() {
 
 function onDirtyTable(table) {
     dirtyTables.push(table);
+    if (!idlingRobots.length <= 0) {
+        let robot = idlingRobots.pop();
+        robot.robot.onActivate(table);
+    }
 }

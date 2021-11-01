@@ -119,19 +119,24 @@ class Robot extends Behaviour {
     constructor(movement) {
         super();
         this.movement = movement;
+
+    }
+
+    awake() {
+        this.entity.robot = this;
     }
 
     update() {
-        this.state;
+
     }
 
     onActivate(target) {
-
+        this.movement.target = target;
     }
 
 }
 
-let dirtyDelay = { min: 3, max: 4 }
+let dirtyDelay = { min: 3000, max: 8000 }
 class Table extends Behaviour {
 
     constructor() {
