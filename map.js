@@ -35,6 +35,7 @@ $(document).ready(function () {
     ctx = canvas.getContext("2d");
     restingPoint = new Vector2Scale(0.1, 0.1);
 
+    restingPoint = new Entity(new Vector2Scale(0.1, 0.1), []);
     getPoints();
     getRobots();
     resizeCanvas();
@@ -72,7 +73,7 @@ function getRobots() {
         for (i = 0; i < rawRobots.length; i++) {
             let robot = rawRobots[i];
 
-            let position = new Vector2Scale(restingPoint.scaleX, restingPoint.scaleY);
+            let position = new Vector2Scale(restingPoint.position.scaleX, restingPoint.position.scaleY);
             let spriteRenderer = new SpriteRenderer("../images/Armature_Idle_00.png", 0.1);
             let movement = new Movement(0.2);
             let robotBrain = new Robot(movement);

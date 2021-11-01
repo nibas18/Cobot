@@ -114,12 +114,15 @@ class Movement extends Behaviour {
     }
 }
 
-let timeToClean = 2;
+let timeToClean = 2000;
+let state = { idle: 0, activated: 1, returning: 2, cleaning: 3 }
 class Robot extends Behaviour {
     constructor(movement) {
         super();
         this.movement = movement;
-
+        this.state = state.idle;
+        this.cleaningTimer = 0;
+        this.target = null;
     }
 
     awake() {
@@ -127,11 +130,36 @@ class Robot extends Behaviour {
     }
 
     update() {
-
+        switch (this.state) {
+            case state.idle:
+                break;
+            case state.activated:
+                if (isPointInRange(this.movement.target.position, this.entity.position, 0.2)) {
+                    this.state = state.cleaning;
+                    this.cleaningTimer = timeToClean;
+                }
+                break;
+            case state.returning:
+                if (isPointInRange(this.movement.target.position, this.entity.position, 0.2)) {
+                    this.movement.target = null;
+                    this.state = idle;
+                }
+                break;
+            case state.cleaning:
+                this.cleaningTimer = this.cleaningTimer - 1000 / fps;
+                if (this.cleaningTimer <= 0) {
+                    this.movement.target = restingPoint;
+                    this.state = state.returning;
+                }
+                break;
+            default:
+                break;
+        }
     }
 
     onActivate(target) {
         this.movement.target = target;
+        this.state = state.activated;
     }
 
 }
