@@ -108,8 +108,53 @@ class Movement extends Behaviour {
 
             let currentPos = this.entity.position;
 
-            this.entity.position.setScale(move.x + currentPos.x,  move.y + currentPos.y);
+            this.entity.position.setScale(move.x + currentPos.x, move.y + currentPos.y);
 
         }
+    }
+}
+
+let timeToClean = 2;
+class Robot extends Behaviour {
+    constructor(movement) {
+        super();
+        this.movement = movement;
+    }
+
+    update() {
+        this.state;
+    }
+
+    onActivate(target) {
+
+    }
+
+}
+
+let dirtyDelay = { min: 3, max: 4 }
+class Table extends Behaviour {
+
+    constructor() {
+        super();
+        this.timer = getRandomFloat(dirtyDelay.min, dirtyDelay.max);
+        this.isDirty = false;
+    }
+
+    update() {
+        if (this.isDirty) return;
+        this.timer = this.timer - 1000 / fps;
+        if (this.timer <= 0) {
+            this.onDirty();
+        }
+    }
+
+    onDirty() {
+        this.isDirty = true;
+        onDirtyTable(this.entity);
+    }
+
+    onCleaned() {
+        this.isDirty = false;
+        this.timer = getRandomFloat(dirtyDelay.min, dirtyDelay.max);
     }
 }

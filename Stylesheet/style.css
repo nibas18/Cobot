@@ -2,32 +2,38 @@ body{
     margin:0;
     padding:0;
 }
+
 .canvas{
-    min-height: 70vh;
+    height: auto;
     width: 100%;
 }
 
 .upper-navigation{
+
 }
+
 .lower-navigation{
     height: 70px;
     width: 100%;
-    position: fixed;
     bottom: 0;
     border-top: 6px solid blueviolet;
     border-radius: 20px;
 }
+
 .upper-navigation .fa-user-circle{
     margin-left: 90%;
 }
+
 .upper-navigation .fa-bars{
     margin-left: 20px;
 }
+
 .fa-bars, .fa-user-circle{
     font-size: 20px;
     color:blueviolet;
     margin-top: 8px;
 }
+
 .fa-robot, .fa-tasks, .fa-map-marked-alt, .fa-ellipsis-h{
     margin-left: 17%;
     margin-top: 20px;
