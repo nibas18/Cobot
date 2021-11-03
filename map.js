@@ -6,17 +6,18 @@ const fps = 60;
 let debugMode = false;
 
 let entities = [];
+let idlingRobots = [];
+let dirtyTables = [];
+let restingPoint;
 
 let rawRobots = [
     {
         name: "Robot 1",
-        position: { x: 0.2, y: 0.2 }
     },
     {
         name: "Robot 2",
-        position: { x: 0.8, y: 0.8 }
     }
-]
+];
 
 let rawPoints = [
     {
@@ -27,14 +28,16 @@ let rawPoints = [
         name: "Table 2",
         position: { x: 0.2, y: 0.8 }
     }
-]
+];
 
 $(document).ready(function () {
     canvas = document.getElementById("canvas");
     ctx = canvas.getContext("2d");
-   
+    restingPoint = new Vector2Scale(0.1, 0.1);
+
+    restingPoint = new Entity(new Vector2Scale(0.1, 0.1), []);
     getPoints();
-     getRobots();
+    getRobots();
     resizeCanvas();
     setInterval(function () { update(); }, 1000 / fps);
 });
@@ -48,7 +51,7 @@ function resizeCanvas() {
         pageScale = window.innerHeight;
         scale = canvas.height;
     }
-   
+
     entities.forEach(element => {
         element.onUpdateScale();
     });
@@ -66,16 +69,17 @@ function update() {
 
 function getRobots() {
     //Get Robots. Current implementation is only for looks.
-    for(i = 0; i < rawRobots.length; i++){
-        for(i = 0; i < rawRobots.length; i++){
-            let point = rawRobots[i];
-    
-            let position = new Vector2Scale(point.position.x, point.position.y);
+    for (i = 0; i < rawRobots.length; i++) {
+        for (i = 0; i < rawRobots.length; i++) {
+            let robot = rawRobots[i];
+
+            let position = new Vector2Scale(restingPoint.position.scaleX, restingPoint.position.scaleY);
             let spriteRenderer = new SpriteRenderer("../images/Armature_Idle_00.png", 0.1);
             let movement = new Movement(0.2);
-            movement.target= entities[i];
-            let entity = new Entity(position, [spriteRenderer, movement]);
-    
+            let robotBrain = new Robot(movement);
+            let entity = new Entity(position, [spriteRenderer, movement, robotBrain]);
+
+            idlingRobots.push(entity);
             entity.awake();
             entities.push(entity);
         }
@@ -84,14 +88,23 @@ function getRobots() {
 
 function getPoints() {
     //Get POIs. Current implementation is only for looks.
-    for(i = 0; i < rawPoints.length; i++){
+    for (i = 0; i < rawPoints.length; i++) {
         let point = rawPoints[i];
 
         let position = new Vector2Scale(point.position.x, point.position.y);
         let spriteRenderer = new SpriteRenderer("../images/table_img.png", 0.1);
-        let entity = new Entity(position, [spriteRenderer]);
+        let table = new Table();
+        let entity = new Entity(position, [spriteRenderer, table]);
 
         entity.awake();
         entities.push(entity);
+    }
+}
+
+function onDirtyTable(table) {
+    dirtyTables.push(table);
+    if (!idlingRobots.length <= 0) {
+        let robot = idlingRobots.pop();
+        robot.robot.onActivate(table);
     }
 }

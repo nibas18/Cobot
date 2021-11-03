@@ -69,6 +69,15 @@ class Vector2Scale {
     }
 }
 
+function isPointInRange(reference, point, radius) {
+    var a = reference.x-point.x;
+    var b = reference.y-point.y;
+
+    var c = Math.sqrt(a * a + b * b);
+    console.log(a);
+    return c < radius;
+}
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);

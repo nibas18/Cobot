@@ -108,8 +108,86 @@ class Movement extends Behaviour {
 
             let currentPos = this.entity.position;
 
-            this.entity.position.setScale(move.x + currentPos.x,  move.y + currentPos.y);
+            this.entity.position.setScale(move.x + currentPos.x, move.y + currentPos.y);
 
         }
+    }
+}
+
+let timeToClean = 2000;
+let state = { idle: 0, activated: 1, returning: 2, cleaning: 3 }
+class Robot extends Behaviour {
+    constructor(movement) {
+        super();
+        this.movement = movement;
+        this.state = state.idle;
+        this.cleaningTimer = 0;
+        this.target = null;
+    }
+
+    awake() {
+        this.entity.robot = this;
+    }
+
+    update() {
+        switch (this.state) {
+            case state.idle:
+                break;
+            case state.activated:
+                if (isPointInRange(this.movement.target.position, this.entity.position, 0.4)) {
+                    this.state = state.cleaning;
+                    this.cleaningTimer = timeToClean;
+                }
+                break;
+            case state.returning:
+                if (isPointInRange(this.movement.target.position, this.entity.position, 0.4)) {
+                    this.state = state.idle;
+                    this.movement.target = null;
+                }
+                break;
+            case state.cleaning:
+                this.cleaningTimer = this.cleaningTimer - 1000 / fps;
+                if (this.cleaningTimer <= 0) {
+                    this.movement.target = restingPoint;
+                    this.state = state.returning;
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    onActivate(target) {
+        this.movement.target = target;
+        this.state = state.activated;
+    }
+
+}
+
+let dirtyDelay = { min: 3000, max: 16000 }
+class Table extends Behaviour {
+
+    constructor() {
+        super();
+        this.timer = getRandomFloat(dirtyDelay.min, dirtyDelay.max);
+        this.isDirty = false;
+    }
+
+    update() {
+        if (this.isDirty) return;
+        this.timer = this.timer - 1000 / fps;
+        if (this.timer <= 0) {
+            this.onDirty();
+        }
+    }
+
+    onDirty() {
+        this.isDirty = true;
+        onDirtyTable(this.entity);
+    }
+
+    onCleaned() {
+        this.isDirty = false;
+        this.timer = getRandomFloat(dirtyDelay.min, dirtyDelay.max);
     }
 }
