@@ -1,21 +1,21 @@
 body{
     margin:0;
     padding:0;
+    display: flex;
+    flex-direction: column;  
 }
 
 .canvas{
-    height: auto;
     width: 100%;
 }
 
 .upper-navigation{
-
+    height: 5vh;
 }
 
 .lower-navigation{
-    height: 70px;
+    height: 5vh;
     width: 100%;
-    bottom: 0;
     border-top: 6px solid blueviolet;
     border-radius: 20px;
 }
