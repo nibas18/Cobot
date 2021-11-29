@@ -6,7 +6,15 @@
         <link rel="stylesheet" href="../css_style/stylesheet.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Pathway Gothic One' rel='stylesheet'>
+        <script src="../db/config_db.js"></script>
     </head>
+    <script>
+        function loginFunction(){
+            let mobile = document.getElementById("mobile_input").value;
+            console.log(mobile);
+
+        }
+    </script>
     <body>
 
     <div class="content">
@@ -17,9 +25,9 @@
         <div class="sign_in">
             <div class="sign_in_p1">
                 <p>+45</p>
-                <input class="sign_in_input" type="password" placeholder="Enter mobile phone"/>
+                <input id="mobile_input" class="sign_in_input" type="password" placeholder="Enter mobile phone"/>
             </div>
-            <button class="sign_in_btn">Login</button>
+            <button class="sign_in_btn" onclick="loginFunction()">Login</button>
         </div>
         
         <div class="line"></div>
