@@ -499,7 +499,7 @@ button .iconify{
 	left: 84px;
 	top: -35px;
 }
-.rt, .rn, .sign_in_input::placeholder{
+.rt, .rn{
 	font-weight: bold;
 	font-size: 16px;
 	color: #1A1487;

@@ -6,7 +6,7 @@ function createWindow() {
     });
     const electron = require('electron');
     require('electron-reload')(__dirname);
-    win.loadFile('Html/cafeteria_map.html');
+    win.loadFile('Html/cleaning_staff.html');
 }
 
 app.whenReady().then(() => {
