@@ -9,7 +9,7 @@ let entities = [];
 let idlingRobots = [];
 let dirtyTables = [];
 let restingPoint;
-
+// Der skal kun være en robot i vores simulation. 
 let rawRobots = [
     {
         name: "Robot 1",
@@ -18,7 +18,7 @@ let rawRobots = [
         name: "Robot 2",
     }
 ];
-
+// skal erstattes med zoner, så i stedet for at det er borde som er markeret skal det være zoner.
 let rawPoints = [
     {
         name: "Table 1",
@@ -33,6 +33,8 @@ let rawPoints = [
 $(document).ready(function () {
     canvas = document.getElementById("canvas");
     ctx = canvas.getContext("2d");
+    // erstatter det med et specifikt punkt, men dette punkt er der 
+    // hvor robotten går hen når den har udført sit arbejde.
     restingPoint = new Vector2Scale(0.1, 0.1);
 
     restingPoint = new Entity(new Vector2Scale(0.1, 0.1), []);
@@ -61,7 +63,6 @@ function resizeCanvas() {
 
 function update() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
     entities.forEach(element => {
         element.update();
     });
@@ -74,8 +75,10 @@ function getRobots() {
             let robot = rawRobots[i];
 
             let position = new Vector2Scale(restingPoint.position.scaleX, restingPoint.position.scaleY);
+            // Dette billede skal ændres. 
             let spriteRenderer = new SpriteRenderer("../images/Armature_Idle_00.png", 0.1);
             let movement = new Movement(0.2);
+
             let robotBrain = new Robot(movement);
             let entity = new Entity(position, [spriteRenderer, movement, robotBrain]);
 
