@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Cafeteria Zones</title>
-        <link rel="stylesheet" href="../css_style/stylesheet.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Pathway Gothic One' rel='stylesheet'>
-        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cafeteria Zones</title>
+    <link rel="stylesheet" href="../css_style/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Pathway Gothic One' rel='stylesheet'>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../utilities.js"></script>
+    <script src="../entity.js"></script>
+    <script src="../map.js"></script>
+</head>
+
+<body>
 
     <div class="content">
         <div class="header">
@@ -17,8 +23,12 @@
             <i id="menu" class="iconify" data-icon="gg:menu-grid-o"></i>
         </div>
         <div class="wrapper_background_img"></div>
-        
-        <div class="map_caf">
+
+        <div id="canvas-wrap">
+            <canvas width="308" height="447" id="canvas"></canvas>
+            <div id="overlay" onclick="startFunction()"></div>
+        </div>
+        <!-- <div class="map_caf">
             <div class="map_location"></div>
             <div class="zone_list">
                 <div id="zone1" class="zones"></div>
@@ -26,8 +36,8 @@
                 <div id="zone3" class="zones"></div>
                 <div id="zone4" class="zones"></div>
             </div>
-        </div>
-        
+        </div> -->
+
         <!--Bellow Menu-->
         <div class="below_menu">
             <i id="tasks" class="iconify" data-icon="fluent:tasks-app-28-regular"></i>
@@ -35,7 +45,7 @@
             <i id="zones" class="iconify" data-icon="carbon:map"></i>
             <i id="more" class="iconify" data-icon="fluent:more-circle-32-filled"></i>
         </div>
-        
+
         <!--Task List-->
         <div class="task_list">
             <hr class="top_line">
@@ -95,5 +105,6 @@
 
     </div>
 
-    </body>
+</body>
+
 </html>
