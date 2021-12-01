@@ -7,9 +7,10 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Pathway Gothic One' rel='stylesheet'>
         <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+        <script src="../backend/menu.js"></script>
+
     </head>
     <body>
-
     <div class="content">
         <div class="header">
             <i id="back" class="iconify" data-icon="eva:arrow-ios-back-outline"></i>
@@ -23,15 +24,15 @@
         </div>
 
         <!--Below Menu-->
-        <div class="below_menu">
-            <i id="tasks" class="iconify" data-icon="fluent:tasks-app-28-regular"></i>
-            <i id="c_robots" class="iconify" data-icon="mdi:robot-industrial"></i>
+        <div id="overall_menu" class="below_menu">
+            <i id="tasks" onclick="taskFunction()" class="iconify" data-icon="fluent:tasks-app-28-regular"></i>
+            <i id="c_robots" onclick="robotFunction()" class="iconify" data-icon="mdi:robot-industrial"></i>
             <i id="zones" class="iconify" data-icon="carbon:map"></i>
             <i id="more" class="iconify" data-icon="fluent:more-circle-32-filled"></i>
         </div>
         
         <!--Task List-->
-        <div class="task_list">
+        <div id="overall_task_list" class="task_list">
             <hr class="top_line">
             <p class="task_title">Lists of Tasks</p>
 
@@ -63,7 +64,7 @@
         </div>
 
         <!--Robot List-->
-        <div class="robot_list">
+        <div id="overall_robot_list" class="robot_list">
             <hr class="top_line">
             <p class="robot_title">Lists of Robots</p>
 
@@ -88,6 +89,6 @@
         </div>
 
     </div>
-  
+
     </body>
 </html>
