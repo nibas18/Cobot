@@ -10,10 +10,9 @@
 
     <div class="content">
         <div class="logo_img"></div>    
-        <button class="start_btn" onclick="location.href = 'sign_in_page.html';">Start</button>
+        <button class="start_btn" onclick="location.href = 'sign_in_page.php';">Start</button>
         <div class="line"></div>
     </div>
 
-    <scrip
     </body>
 </html>

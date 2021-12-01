@@ -13,7 +13,7 @@
         </div>
               
         <div class="app">
-            <a class="app1" href="landing_page.html"></a>
+            <a class="app1" href="landing_page.php"></a>
             <!--<div  class="app1"></div>!-->
             <span class="app2">EB</span>
         </div>

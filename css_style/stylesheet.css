@@ -1,13 +1,28 @@
+#overlay{
+    border:1px solid black;
+    width: 150px;
+    height: 75px;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+
+}
+
 body{
     font-family: Roboto;
+	margin-right: auto;
+	margin-left: auto;
+	
 }
 
 /**Cleaning Staff Page**/
-.cs_content{
+.cs_content, .content{
 	background-color:rgba(255, 255, 255, 1);
 	width:375px;
 	height:812px;
 	position:absolute;
+	left: 754px;
+	top: 75px;
 }
 .homepage{ 
 	width:378px;
@@ -344,18 +359,18 @@ button .iconify{
 	top: 79px;
 	background: url(../images/map_wrapper.png);
 }
-.map_caf{
-	position: absolute;
-	width: 308px;
-	height: 447px;
-	left: 28px;
-	top: 162px;
-	background: url(../images/cafeteria_img.png);
-	background-repeat: no-repeat;
-	background-size:contain;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	border-radius: 7px;
-	border: 3.5px solid #9796D4;
+.map_caf, #canvas-wrap{
+    position: absolute;
+    width: 308px;
+    height: 447px;
+    left: 28px;
+    top: 162px;
+    /*background: url(../images/cafeteria_img.png);*/
+    background-repeat: no-repeat;
+    background-size:contain;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 7px;
+    border: 3.5px solid #9796D4;
 }
 .map_location{
 	position: absolute;

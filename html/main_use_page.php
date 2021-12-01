@@ -24,7 +24,7 @@
                 <p>Schedule/Clock</p>
             </button>
 
-            <button class="caf_btn">
+            <button class="caf_btn" onclick="javascript:location.href='cafeteria_map.php'">
                 <i class="iconify" data-icon="mdi:robot"></i>
                 <div class="divide"></div>
                 <p>Cafeteria and Robots</p>

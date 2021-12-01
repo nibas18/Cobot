@@ -29,7 +29,9 @@ let rawPoints = [
         position: { x: 0.2, y: 0.8 }
     }
 ];
-
+function startFunction() {
+    getPoints.awakeFunction();
+}
 $(document).ready(function () {
     canvas = document.getElementById("canvas");
     ctx = canvas.getContext("2d");
@@ -66,7 +68,6 @@ function update() {
         element.update();
     });
 }
-
 function getRobots() {
     //Get Robots. Current implementation is only for looks.
     for (i = 0; i < rawRobots.length; i++) {
@@ -74,7 +75,7 @@ function getRobots() {
             let robot = rawRobots[i];
 
             let position = new Vector2Scale(restingPoint.position.scaleX, restingPoint.position.scaleY);
-            let spriteRenderer = new SpriteRenderer("../images/Armature_Idle_00.png", 0.1);
+            let spriteRenderer = new SpriteRenderer("../images/robot.PNG", 0.1);
             let movement = new Movement(0.2);
             let robotBrain = new Robot(movement);
             let entity = new Entity(position, [spriteRenderer, movement, robotBrain]);
@@ -96,11 +97,13 @@ function getPoints() {
         let table = new Table();
         let entity = new Entity(position, [spriteRenderer, table]);
 
-        entity.awake();
         entities.push(entity);
+        function awakeFunction() {
+            entity.awake();
+
+        }
     }
 }
-
 function onDirtyTable(table) {
     dirtyTables.push(table);
     if (!idlingRobots.length <= 0) {
