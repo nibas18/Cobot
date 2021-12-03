@@ -27,7 +27,27 @@
             echo "You failed to login. Try Again!";
         }
     }
-    
+
+    //Another Testing:
+    $sql = "SELECT * FROM Tasks";
+    $query = mysqli_query($db_connection, $sql);
+    //$row = mysqli_fetch_assoc($query);
+    $count = mysqli_num_rows($query);
+    if($count > 0){
+        while($row = mysqli_fetch_array($query)){
+            echo '<hr class="underline">';
+            echo '<i id="x" class="iconify" data-icon="bi:x"></i>';
+            echo '<i id="assignments" class="iconify" data-icon="ic:baseline-assignment"></i>';
+            echo '<div class="task_txt">';
+            echo '<p class="rt">' . $row['Tasknumber']. ':</p>';
+            echo '<li>' . $row['Taskdescription']. '</li>';
+            echo '</div>';
+        }
+    }
+
+
+
+
     //Testing:
     /*
     $sql = "SELECT * FROM Users";

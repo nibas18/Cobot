@@ -405,6 +405,14 @@ button .iconify{
 	margin-left: 48px;
 	cursor: pointer;
 }
+#task_icon_btn{
+	border: 1px solid orange;
+	width:100px;
+	height:70px;
+	position:absolute;
+	top: 200px;
+}
+
 /**End of Cafeteria Map**/
 /**Cafeteria Zones**/
 .zones{
@@ -610,6 +618,12 @@ button .iconify{
 	position:absolute;
 	left: -1px;
 	top: 708px;
+}
+.robot_cap_overview{
+	z-index: 1;
+    position:relative;
+	left:760px;
+	top: 40px;
 }
 /**End of Robot Status**/
 /**Settings**/

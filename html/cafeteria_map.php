@@ -8,6 +8,7 @@
         <link href='https://fonts.googleapis.com/css?family=Pathway Gothic One' rel='stylesheet'>
         <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
         <script src="../backend/menu.js"></script>
+        <link href="../database/db_connection.php">
 
     </head>
     <body>
@@ -24,14 +25,48 @@
         </div>
 
         <!--Below Menu-->
-        <div id="overall_menu" class="below_menu">
+        <form id="overall_menu" class="below_menu">
             <i id="tasks" onclick="taskFunction()" class="iconify" data-icon="fluent:tasks-app-28-regular"></i>
             <i id="c_robots" onclick="robotFunction()" class="iconify" data-icon="mdi:robot-industrial"></i>
             <i id="zones" class="iconify" data-icon="carbon:map"></i>
             <i id="more" class="iconify" data-icon="fluent:more-circle-32-filled"></i>
-        </div>
+        </form>
         
-        <!--Task List-->
+        <!--Task List!-->
+        <div id="overall_task_list" class="task_list">
+            <hr class="top_line">
+            <p class="task_title">Lists of Tasks</p>
+            <?php
+            $servername = "sql11.freesqldatabase.com";
+            $username = "sql11455522";
+            $password = "CUYAidmbwy";
+            $database ="sql11455522";
+            $db_connection = mysqli_connect($servername, $username, $password, $database);
+            //Another Testing:
+            $sql = "SELECT * FROM Tasks";
+            $query = mysqli_query($db_connection, $sql);
+            //$row = mysqli_fetch_assoc($query);
+            $count = mysqli_num_rows($query);
+            if($count > 0){
+                while($row = mysqli_fetch_array($query)){
+                    echo '<hr class="underline">';
+                    echo '<i id="x" class="iconify" data-icon="bi:x"></i>';
+                    echo '<i id="assignments" class="iconify" data-icon="ic:baseline-assignment"></i>';
+                    echo '<div class="task_txt">';
+                    echo '<p class="rt">' . $row['Tasknumber']. ':</p>';
+                    echo '<li>' . $row['Taskdescription']. '</li>';
+                    echo '</div>';
+                    echo '<hr class="underlines">';
+                    echo '</div>';
+                }
+            }
+            ?>
+
+        </div>
+
+
+
+        <!--Task List
         <div id="overall_task_list" class="task_list">
             <hr class="top_line">
             <p class="task_title">Lists of Tasks</p>
@@ -61,7 +96,7 @@
             </div>
 
             <hr class="underlines">
-        </div>
+        </div> !-->
 
         <!--Robot List-->
         <div id="overall_robot_list" class="robot_list">
