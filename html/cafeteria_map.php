@@ -12,6 +12,7 @@
 
     </head>
     <body>
+
     <div class="content">
         <div class="header">
             <i id="back" class="iconify" data-icon="eva:arrow-ios-back-outline"></i>
@@ -32,39 +33,17 @@
             <i id="more" class="iconify" data-icon="fluent:more-circle-32-filled"></i>
         </form>
         
-        <!--Task List!-->
-        <div id="overall_task_list" class="task_list">
-            <hr class="top_line">
-            <p class="task_title">Lists of Tasks</p>
-            <?php
-            $servername = "sql11.freesqldatabase.com";
-            $username = "sql11455522";
-            $password = "CUYAidmbwy";
-            $database ="sql11455522";
-            $db_connection = mysqli_connect($servername, $username, $password, $database);
-            //Another Testing:
-            $sql = "SELECT * FROM Tasks";
-            $query = mysqli_query($db_connection, $sql);
-            //$row = mysqli_fetch_assoc($query);
-            $count = mysqli_num_rows($query);
-            if($count > 0){
-                while($row = mysqli_fetch_array($query)){
-                    echo '<hr class="underline">';
-                    echo '<i id="x" class="iconify" data-icon="bi:x"></i>';
-                    echo '<i id="assignments" class="iconify" data-icon="ic:baseline-assignment"></i>';
-                    echo '<div class="task_txt">';
-                    echo '<p class="rt">' . $row['Tasknumber']. ':</p>';
-                    echo '<li>' . $row['Taskdescription']. '</li>';
-                    echo '</div>';
-                    echo '<hr class="underlines">';
-                    echo '</div>';
-                }
-            }
-            ?>
-
+        <!--Task List:!-->
+	    <div id="overall_task_list" class="task_list">
+		    <hr class="top_line">
+    	    <p class="task_title">Lists of Tasks</p>
+    	    <hr class="hr_line">
+            <div class="the_list">
+                <?php
+                    require("../backend/tasks_list.php");
+                ?>
+            </div>
         </div>
-
-
 
         <!--Task List
         <div id="overall_task_list" class="task_list">

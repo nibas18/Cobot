@@ -2,17 +2,21 @@
     $servername = "sql11.freesqldatabase.com";
     $username = "sql11455522";
     $password = "CUYAidmbwy";
-    $database ="sql11455522";
+    $database = "sql11455522";
 
     $db_connection = mysqli_connect($servername, $username, $password, $database);
 
+    
     if($db_connection){
         echo "You have successfully connected to the database!";
     }else{
         echo "Error! You have failed to connect to the database. Try Again!";
         die("Failure log: " . mysqli_connect_error());
     }
-    //Login System:    
+
+
+
+    /*Login System:    
     if(isset($_POST['login'])) {
         $mobile = $_POST['mobile'];
         $sql = "SELECT * FROM Users WHERE Mobile ='$mobile'";
@@ -44,8 +48,7 @@
             echo '</div>';
         }
     }
-
-
+*/
 
 
     //Testing:
