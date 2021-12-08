@@ -12,6 +12,7 @@
 
     </head>
     <body>
+        <img id="table" src="../images/table.png" width="10" height="10"></img>
     <div class="content">
         <div class="header">
             <i id="back" class="iconify" data-icon="eva:arrow-ios-back-outline"></i>
@@ -21,6 +22,34 @@
         <div class="wrapper_background_img"></div>
         
         <div class="map_caf">
+           
+            <canvas id="canvas" width="308" height="447" style="border: 1px solid #000000"></canvas>
+
+            <script src="zones.js">
+                
+            </script>
+
+            <script>
+                zone1 = new Zone(9, 133, 221,91, {table1: [30, 45, 30, 28],table2:[100,45, 30, 28],table3:[170, 45,30, 28]})
+                zone2 = new Zone(9, 224, 191,74, {table1: [20, 20, 10,10],table2:[40,40, 10, 10],table3:[60,60,10,10]})
+                zone3 = new Zone(9, 298, 191,81, {table1: [20, 20, 10,10],table2:[40,40, 10, 10],table3:[60,60,10,10]})
+                zone4 = new Zone(200, 224, 106,155, {table1: [20, 20, 10,10],table2:[40,40, 10, 10],table3:[60,60,10,10]})
+
+                var c = document.getElementById("canvas")
+                var ctx = c.getContext("2d")
+                ctx.beginPath();
+
+                //zone1
+                //ctx.rect(9,133, 221, 91);
+                //zone2
+                //ctx.rect(9,224, 191, 74);
+                //zone3
+                //ctx.rect(9,298, 191, 81);
+                //zone4
+                //ctx.rect(200, 224, 106, 155);
+                //ctx.stroke();
+            </script>
+            
             <div class="map_location"></div>
         </div>
 

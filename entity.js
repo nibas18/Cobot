@@ -191,3 +191,12 @@ class Table extends Behaviour {
         this.timer = getRandomFloat(dirtyDelay.min, dirtyDelay.max);
     }
 }
+
+class Zone {
+
+    
+    tables = []
+    constructor (tables){
+        this.tables = tables
+    }
+}
