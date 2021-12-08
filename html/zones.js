@@ -10,11 +10,13 @@ class Zone {
         var c = document.getElementById("canvas")
         var ctx = c.getContext("2d")
         // image 
-        var img = document.getElementById("table");
+        // var img = document.getElementById("table");
         ctx.beginPath();
+        //zonen
         ctx.rect(start_x, start_y, this.width,this.height);
+        //kant
         ctx.stroke();
-
+        // looper igennem de forskellige borde. 
         for (const [key, value] of Object.entries(this.tables)){
             ctx.rect(value[0]+this.start_x, value[1]+this.start_y, value[2], value[3]);
             ctx.stroke();
