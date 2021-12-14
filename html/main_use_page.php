@@ -17,6 +17,8 @@
             <i id="menu" class="iconify" data-icon="gg:menu-grid-o"></i>
         </div>
 
+        <div class="personal_id"></div>
+
         <div class="btn_list">
             <button class="schedule_btn">
                 <i class="iconify" data-icon="healthicons:i-schedule-school-date-time"></i>
@@ -24,7 +26,7 @@
                 <p>Schedule/Clock</p>
             </button>
 
-            <button class="caf_btn" onclick="javascript:location.href='cafeteria_map.php'">
+            <button class="caf_btn" onclick="javascript:location.href='cafeteria_selection.php'">
                 <i class="iconify" data-icon="mdi:robot"></i>
                 <div class="divide"></div>
                 <p>Cafeteria and Robots</p>

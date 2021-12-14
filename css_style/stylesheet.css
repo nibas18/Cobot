@@ -211,9 +211,22 @@ body{
 	border-radius: 6px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.error_text{
+	color:#DD1700;
+	position: absolute;
+	left: 103px;
+	right: 99px;
+	top: 660px;
+}
 /**End of Sign In Page**/
 
 /**Main Use Page**/
+/*
+.personal_id{
+	border: 1px solid black;
+	position: absolute;
+	top:-800px;
+}*/
 .header{
 	background-color: #2F2790;
 	width: 377px;
@@ -296,7 +309,7 @@ button .iconify{
 	width: 275px;
 	height: 45px;
 	left: 52px;
-	top: 48px;
+	top: 72px;
 }
 .select_caf_p p{
 	font-size: 45px;
@@ -305,22 +318,26 @@ button .iconify{
 	letter-spacing: 0.04em;
 }
 .tek_img, .big_img, .small_img{
-	border: 4px dashed #1A1487;
+	border:4px solid #1A1487;
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	border-radius: 6px;
-}	
+}
+.tek_img:hover, .big_img:hover, .small_img:hover{
+	border: 4px solid #2DE1CC;
+	cursor: pointer;
+}
 .tek_caf, .big_caf, .small_caf{
 	position: absolute;
 	left: 98px;
 }
 .tek_caf{
-	top: 160px;
+	top: 210px;
 }
 .big_caf{
-	top: 340px;
+	top: 390px;
 }
 .small_caf{
-	top: 520px;
+	top: 570px;
 }
 .tek_caf p, .big_caf p, .small_caf p{
 	font-family: Pathway Gothic One;

@@ -8,5 +8,6 @@
     <body>
     <p>Welcome to the Cobot Project: <a href="html/cleaning_staff.php">To Continue click on this link.</a></p>
     <a href="html/cafeteria_zones.php">Map Simulation</a>
+    <a href="html/cafeteria_map.php">Map Zones </a>
     </body>
 </html>

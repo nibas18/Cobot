@@ -16,6 +16,8 @@ class Zone {
         ctx.rect(start_x, start_y, this.width,this.height);
         //kant
         ctx.stroke();
+        
+        //ctx.addEventListener('click', testFunction);
         // looper igennem de forskellige borde. 
         for (const [key, value] of Object.entries(this.tables)){
             ctx.rect(value[0]+this.start_x, value[1]+this.start_y, value[2], value[3]);

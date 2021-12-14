@@ -37,13 +37,14 @@
                 let zone3 = new Zone(9, 298, 191, 81, { table1: [20, 20, 10, 10], table2: [40, 40, 10, 10], table3: [60, 60, 10, 10] })
                 let zone4 = new Zone(200, 224, 106, 155, { table1: [20, 20, 10, 10], table2: [40, 40, 10, 10], table3: [60, 60, 10, 10] })
 
+                let t = new Zone();
                 var c = document.getElementById("canvas");
                 var ctx = c.getContext("2d");
                 ctx.beginPath();
                 function testFunction(){
                     console.log("Welcome");
                 }
-                c.zone1.addEventListener('click', testFunction);
+                //c.zone1.addEventListener('click', testFunction);
 
 
 

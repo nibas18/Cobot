@@ -14,12 +14,13 @@
         <p class="sign_in_p">Sign-in</p>
         <img class="cs_img" src="../images/cleaningstaff_img.png">
         
-        <form class="sign_in" method="POST" action="../database/db_connection.php">
+        <form class="sign_in" method="POST" action="../backend/loginsystem.php">
             <div class="sign_in_p1">
                 <p>+45</p>
                 <input class="sign_in_input" name="mobile" type="password" placeholder="Enter mobile phone" required>
             </div>
             <button class="sign_in_btn" name="login">Login</button>
+            <p class="error_text"><?php $error_message ?></p>
         </form>
         
         <div class="line"></div>

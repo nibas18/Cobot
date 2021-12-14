@@ -12,21 +12,6 @@
         echo "Error! You have failed to connect to the database. Try Again!";
         die("Failure log: " . mysqli_connect_error());
     }
-    //Login System:    
-    if(isset($_POST['login'])) {
-        $mobile = $_POST['mobile'];
-        $sql = "SELECT * FROM Users WHERE Mobile ='$mobile'";
-        $query_result = mysqli_query($db_connection, $sql);
-        //$row = mysqli_fetch_assoc($query_result);
-        $row = mysqli_fetch_array($query_result, MYSQLI_ASSOC);
-        $count = mysqli_num_rows($query_result);
-        if($count > 0){
-            //header("Location: ../html/main_use_page.php");
-            header("location: ../html/main_use_page.php");
-        }else{
-            echo "You failed to login. Try Again!";
-        }
-    }
 
     //Another Testing:
     $sql = "SELECT * FROM Tasks";
