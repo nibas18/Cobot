@@ -1,8 +1,8 @@
 <?php
-    $servername = "sql11.freesqldatabase.com";
-    $username = "sql11455522";
-    $password = "CUYAidmbwy";
-    $database ="sql11455522";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database ="cobot";
 
     $db_connection = mysqli_connect($servername, $username, $password, $database);
 
