@@ -8,7 +8,8 @@
         <link href='https://fonts.googleapis.com/css?family=Pathway Gothic One' rel='stylesheet'>
     </head>
     <body>
-
+    <?php $error_message = ""; ?>
+    
     <div class="content">
         <div class="header_banner"></div>
         <p class="sign_in_p">Sign-in</p>
@@ -20,7 +21,7 @@
                 <input class="sign_in_input" name="mobile" type="password" placeholder="Enter mobile phone" required>
             </div>
             <button class="sign_in_btn" name="login">Login</button>
-            <p class="error_text"><?php $error_message ?></p>
+            <p class="error_text"><?php echo "$error_message" ?></p>
         </form>
         
         <div class="line"></div>

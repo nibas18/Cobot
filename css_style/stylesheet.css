@@ -214,9 +214,8 @@ body{
 .error_text{
 	color:#DD1700;
 	position: absolute;
-	left: 103px;
-	right: 99px;
-	top: 660px;
+	top:170px;
+	left:125px;
 }
 /**End of Sign In Page**/
 
@@ -476,7 +475,7 @@ button .iconify{
 	box-sizing: border-box;
 }
 /**End of Cafeteria Zones**/
-/**Task Functionality**/
+/**Task List Functionality**/
 .task_list{
 	position: absolute;
 	left: -1px;
@@ -495,6 +494,7 @@ button .iconify{
 	background-color:#9F9CCC;
 	width: 135px;
 	height: 4px;
+	cursor: pointer;
 }
 .task_title, .robot_title{
 	color: #1A1487;
@@ -507,6 +507,7 @@ button .iconify{
 	left: 106px;
 	top: 3px;
 }
+/**Nida - From here**/
 .underline{
 	background-color:#C4C4C4;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -551,6 +552,11 @@ button .iconify{
 	position: relative;
 	top:-10px;
 }
+.scroll_list{
+	height:300px;
+	overflow: scroll;
+}
+/**Nida to here**/
 /**End of Task Functionality**/
 /**Robot List**/
 .robot_list{
@@ -575,7 +581,7 @@ button .iconify{
 #robots{
 	position: relative;
 	font-size: 44px;
-	left:-8px;
+	left:28px;
 	top: 21px;
 	color:#9796D4;
 }
@@ -639,8 +645,8 @@ button .iconify{
 .robot_cap_overview{
 	z-index: 1;
     position:relative;
-	left:760px;
-	top: 40px;
+	left:0px;
+	top: 0px;
 }
 /**End of Robot Status**/
 /**Settings**/
