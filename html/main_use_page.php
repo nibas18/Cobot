@@ -1,19 +1,32 @@
+<?php
+session_start();
+require("../backend/loginsystem.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Main Use Page</title>
-        <link rel="stylesheet" href="../css_style/stylesheet.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Pathway Gothic One' rel='stylesheet'>
-        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main Use Page</title>
+    <link rel="stylesheet" href="../css_style/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Pathway Gothic One' rel='stylesheet'>
+    <!--<link href="../backend/loginsystem.php" rel="stylesheet">!-->
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+</head>
+
+<body>
 
     <div class="content">
-    <?php include("../layout/header.php"); ?>
-    
-        <div class="personal_id"></div>
+        <?php include("../layout/header.php"); ?>
+
+        <?php
+        //if(isset($_SESSION["Personalid"])){
+            $Personalid = $_SESSION['Personalid'];
+            echo '<div class="personal_id">Personal ID: ' . $_SESSION['Personalid'] . '</div>';
+        //}
+        ?>
+        <!--<div class="personal_id">Personal ID: <?php /*echo '' . $_SESSION["Personalid"] . ''; */ ?> </div>!-->
 
         <div class="btn_list">
             <button class="schedule_btn">
@@ -40,9 +53,9 @@
                 <p>News Board</p>
             </button>
         </div>
-        
+
         <div class="line"></div>
     </div>
 
-    </body>
+</body>
 </html>
