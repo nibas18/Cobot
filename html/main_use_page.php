@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("../backend/loginsystem.php");
+//require("../backend/loginsystem.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,10 +21,10 @@ require("../backend/loginsystem.php");
         <?php include("../layout/header.php"); ?>
 
         <?php
-        //if(isset($_SESSION["Personalid"])){
+        if(isset($_SESSION["Personalid"])){
             $Personalid = $_SESSION['Personalid'];
             echo '<div class="personal_id">Personal ID: ' . $_SESSION['Personalid'] . '</div>';
-        //}
+        }
         ?>
         <!--<div class="personal_id">Personal ID: <?php /*echo '' . $_SESSION["Personalid"] . ''; */ ?> </div>!-->
 
