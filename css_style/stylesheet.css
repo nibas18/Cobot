@@ -561,8 +561,12 @@ button .iconify{
 	position: relative;
 	top:-10px;
 }
-.scroll_list{
+.scroll_list_t{
 	height:300px;
+	overflow: scroll;
+}
+.scroll_list_r{
+	height:210px;
 	overflow: scroll;
 }
 /**Nida to here**/

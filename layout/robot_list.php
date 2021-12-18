@@ -12,7 +12,7 @@
     <hr class="top_line" onclick="drag_down_r()">
     <p class="robot_title">Lists of Robots</p>
     <hr class="underline">
-    <div class="scroll_list">
+    <div class="scroll_list_r">
         <?php
        
         $db_connection = require("../database/db_connection.php");
