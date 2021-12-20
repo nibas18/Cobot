@@ -28,10 +28,10 @@
             </script>
 
             <script>
-                let zone1 = new Zone(9, 133, 221, 91, { table1: [30, 45, 30, 28], table2: [100, 45, 30, 28], table3: [170, 45, 30, 28] })
-                let zone2 = new Zone(9, 224, 191, 74, { table1: [60, 40, 20, 40], table2: [40, 40, 10, 10], table3: [60, 60, 10, 10] })
-                let zone3 = new Zone(9, 298, 191, 81, { table1: [20, 20, 10, 10], table2: [40, 40, 10, 10], table3: [60, 60, 10, 10] })
-                let zone4 = new Zone(200, 224, 106, 155, { table1: [20, 20, 10, 10], table2: [40, 40, 10, 10], table3: [60, 60, 10, 10] })
+                let zone1 = new Zone(9, 133, 221, 91, { table1: [20, 30, 30, 28], table2: [100, 30, 30, 28], table3: [170, 30, 30, 28] })
+                let zone2 = new Zone(9, 224, 191, 74, { table1: [20, 25, 20, 40], table2: [100, 25, 10, 10], table3: [155, 25, 40, 28] })
+                let zone3 = new Zone(9, 298, 191, 81, { table1: [20, 25, 10, 10], table2: [100, 25, 30, 10], table3: [155, 25, 40, 28] })
+                let zone4 = new Zone(200, 224, 106, 155, { table1: [20, 25, 10, 10], table2: [20, 100, 10, 10], table3: [60, 60, 10, 10] })
 
                 let t = new Zone();
                 var c = document.getElementById("canvas");
