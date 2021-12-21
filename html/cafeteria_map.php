@@ -10,6 +10,11 @@
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <script src="../backend/menu.js"></script>
     <link href="../database/db_connection.php">
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../utilities.js"></script>
+    <script src="../entity.js"></script>
+    <script src="../map.js"></script>!-->
 
 </head>
 
