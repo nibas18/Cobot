@@ -148,8 +148,11 @@ class Robot extends Behaviour {
                 this.cleaningTimer = this.cleaningTimer - 1000 / fps;
                 if (this.cleaningTimer <= 0) {
                     this.movement.target = restingPoint;
-                    this.state = state.returning;
+                    this.state = state.activated;
+                   
+                    // this.state = state.returning;
                 }
+
                 break;
             default:
                 break;
@@ -188,26 +191,6 @@ class Table extends Behaviour {
     onCleaned() {
         this.isDirty = false;
         this.timer = getRandomFloat(dirtyDelay.min, dirtyDelay.max);
-    }
-}
-
-class Collision extends Behaviour {
-    constructor(context, x, y, vx, vy) {
-        super(context, x, y, vx, vy);
-
-        // Set default width and height
-        this.width = 50;
-        this.height = 50;
-    }
-
-    draw() {
-        // Draw a simple square
-        this.context.fillStyle = this.isColliding ? '#ff8080' : '#0099b0';
-        this.context.fillRect(this.x, this.y, this.width, this.height);
-    }
-
-    onCollision(othercolliders) {
-
     }
 
 }

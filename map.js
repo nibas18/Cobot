@@ -9,11 +9,16 @@ let entities = [];
 let idlingRobots = [];
 let dirtyTables = [];
 let restingPoint;
+let rawFailureState = [{
+    position: { x: 0.2, y: 0.30}
+}]
+
 // Der skal kun være en robot i vores simulation. 
 let rawRobots = [{
         name: "Robot 1",
     }
 ];
+
 /*
 let zone1 = new Zone(9, 133, 221, 91, {
     table1: [20, 30, 30, 28],
@@ -146,4 +151,15 @@ function onDirtyTable(table) {
         let robot = idlingRobots.pop();
         robot.robot.onActivate(table);
     }
+}
+function onFailureState() {
+    for (i=0; i < rawRobots.length; i++) {
+        let point = rawRobots[i];
+        //let position = new Vector2Scale(point.position.x, point.position.y);
+        if (rawFailureState.position.x == point.position.x && rawFailureState.position.y == point.position.y){
+            console.log("failure has occured");
+        }
+    }
+   
+    
 }
