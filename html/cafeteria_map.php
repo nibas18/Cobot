@@ -10,11 +10,11 @@
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <script src="../backend/menu.js"></script>
     <link href="../database/db_connection.php">
-    <!--
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../utilities.js"></script>
     <script src="../entity.js"></script>
-    <script src="../map.js"></script>!-->
+    <script src="../map.js"></script>
 
 </head>
 
@@ -28,12 +28,12 @@
 
             <canvas id="canvas" width="308" height="447" style="border: 1px solid #000000"></canvas>
 
-            <script src="zones.js">
+           <!-- <script src="zones.js">-->
 
             </script>
 
-            <script>
-                let zone1 = new Zone(9, 133, 221, 91, { table1: [20, 30, 30, 28], table2: [100, 30, 30, 28], table3: [170, 30, 30, 28] })
+           <script>
+               /* let zone1 = new Zone(9, 133, 221, 91, { table1: [20, 30, 30, 28], table2: [100, 30, 30, 28], table3: [170, 30, 30, 28] })
                 let zone2 = new Zone(9, 224, 191, 74, { table1: [20, 25, 20, 40], table2: [85, 25, 10, 10], table3: [150, 25, 40, 28] })
                 let zone3 = new Zone(9, 298, 191, 81, { table1: [20, 25, 10, 10], table2: [85, 25, 10, 10], table3: [150, 25, 40, 28] })
                 let zone4 = new Zone(200, 224, 106, 155, { table1: [20, 25, 10, 10], table2: [20, 100, 10, 10], table3: [60, 60, 10, 10] })
@@ -44,7 +44,7 @@
                 ctx.beginPath();
                 function testFunction(){
                     console.log("Welcome");
-                }
+                } */
                 //c.zone1.addEventListener('click', testFunction);
 
 

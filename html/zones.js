@@ -11,13 +11,48 @@ let dirtyTables = [];
 let restingPoint;
 // Der skal kun være en robot i vores simulation. 
 let rawRobots = [{
-        name: "Robot 1",
-    },
-    {
-        name: "Robot 2",
-    }
+    name: "Robot 1",
+},
+{
+    name: "Robot 2",
+}
 ];
 // skal erstattes med zoner, så i stedet for at det er borde som er markeret skal det være zoner.
+
+let zone1 = new Zone(9, 133, 221, 91, {
+    table1: [20, 30, 30, 28],
+    table2: [100, 30, 30, 28],
+    table3: [170, 30, 30, 28]
+})
+let zone2 = new Zone(9, 224, 191, 74, {
+    table1: [20, 25, 20, 40],
+    table2: [85, 25, 10, 10],
+    table3: [150, 25, 40, 28]
+})
+let zone3 = new Zone(9, 298, 191, 81, {
+    table1: [20, 25, 10, 10],
+    table2: [85, 25, 10, 10],
+    table3: [150, 25, 40, 28]
+})
+let zone4 = new Zone(200, 224, 106, 155, {
+    table1: [20, 25, 10, 10],
+    table2: [20, 100, 10, 10],
+    table3: [60, 60, 10, 10]
+})
+
+let rawPoints = [{
+    name: "Zone 1",
+    position: { x: zone1.start_x, y: zone1.start_y },
+    height: zone1.height,
+    width: zone1.width,
+    tables: {
+        table1: { x: zone1.table1.start_x, y: zone1.table1.start_y, height:zone1.table1.height, width:zone1.table1.width},
+        table2: { x: zone1.table2.start_x, y: zone1.table2.start_y, height:zone1.table2.height, width:zone1.table2.width},
+        table3: { x: zone1.table3.start_x, y: zone1.table3.start_y, height:zone1.table3.height, width:zone1.table3.width}
+    }
+}
+];
+/*
 let rawPoints = [{
         name: "Table 1",
         position: { x: 0.4, y: 0.4 }
@@ -27,8 +62,8 @@ let rawPoints = [{
         position: { x: 0.2, y: 0.8 }
     }
 ];
-
-$(document).ready(function() {
+*/
+$(document).ready(function () {
     canvas = document.getElementById("canvas");
     //canvas.style.backgroundColor = "#FFFFFF";
     ctx = canvas.getContext("2d");
@@ -40,7 +75,7 @@ $(document).ready(function() {
     getPoints();
     getRobots();
     resizeCanvas();
-    setInterval(function() { update(); }, 1000 / fps);
+    setInterval(function () { update(); }, 1000 / fps);
 });
 
 window.addEventListener("resize", resizeCanvas);
@@ -127,7 +162,7 @@ class Zone {
 
         var c = document.getElementById("canvas")
         var ctx = c.getContext("2d")
-            // image 
+        // image 
         var img = document.getElementById("table");
         ctx.beginPath();
         //zonen
