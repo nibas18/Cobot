@@ -116,19 +116,23 @@ function getRobots() {
 
             let robotBrain = new Robot(movement);
             let entity = new Entity(position, [spriteRenderer, movement, robotBrain]);
-            idlingRobots.push(entity);
+            //idlingRobots.push(entity);
             entities.push(entity);
-            entity.awake();
+            //entity.awake();
+            return entity;
         }
     }
 }
-/*
 function startRobot() {
     let entity = getRobots();
     idlingRobots.push(entity);
     entity.awake();
     //entities.push(entity);
-}*/
+}
+function stopRobot(){
+    let entity = getRobots();
+    entity.
+}
 
 function getPoints() {
     //Get POIs. Current implementation is only for looks.
