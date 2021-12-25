@@ -129,10 +129,10 @@ function startRobot() {
     entity.awake();
     //entities.push(entity);
 }
-function stopRobot(){
+/*function stopRobot(){
     let entity = getRobots();
     entity.
-}
+}*/
 
 function getPoints() {
     //Get POIs. Current implementation is only for looks.
