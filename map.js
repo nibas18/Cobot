@@ -10,13 +10,13 @@ let idlingRobots = [];
 let dirtyTables = [];
 let restingPoint;
 let rawFailureState = [{
-    position: { x: 0.2, y: 0.30}
+    position: { x: 0.2, y: 0.30 }
 }]
 
 // Der skal kun være en robot i vores simulation. 
 let rawRobots = [{
-        name: "Robot 1",
-    }
+    name: "Robot 1",
+}
 ];
 
 /*
@@ -45,26 +45,59 @@ let zone4 = new Zone(200, 224, 106, 155, {
 
 
 let rawPoints = [{
-        name: "Table 1",
-        position: { x: 0.2, y: 0.30}
+    name: "Table 1",
+    position: { x: 0.2, y: 0.7 }
 
-    },
-    {
-        name: "Table 2",
-        position: { x: 0.2, y: 0.8 }
-    },
-    {
-        name: "Table 3",
-        position: { x: 0.5, y: 0.3 }
-    },
-    {
-        name: "Table 4",
-        position: { x: 0.2, y: 0.4 }
-    }
+},
+{
+    name: "Table 2",
+    position: { x: 0.2, y: 0.5 }
+},
+{
+    name: "Table 3",
+    position: { x: 0.2, y: 0.3 }
+},
+{
+    name: "Table 4",
+    position: { x: 0.2, y: 0.9 }
+},
+{
+    // y 0.5 definerer midten
+    name: "Table 5",
+    position: { x: 0.5, y: 0.7 }
+},
+{
+    name: "Table 6",
+    position: { x: 0.5, y: 0.5 }
+},
+{
+    name: "Table 7",
+    position: { x: 0.5, y: 0.3 }
+},
+{
+    name: "Table 8",
+    position: { x: 0.5, y: 0.9 }
+},
+{
+    name: "Table 9",
+    position: { x: 0.8, y: 0.7 }
+},
+{
+    name: "Table 10",
+    position: { x: 0.8, y: 0.5 }
+},
+{
+    name: "Table 11",
+    position: { x: 0.8, y: 0.3 }
+},
+{
+    name: "Table 12",
+    position: { x: 0.8, y: 0.9 }
+}
 ];
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     canvas = document.getElementById("canvas");
     canvas.style.backgroundColor = "#FFFFFF";
     ctx = canvas.getContext("2d");
@@ -76,7 +109,7 @@ $(document).ready(function() {
     getPoints();
     getRobots();
     resizeCanvas();
-    setInterval(function() { update(); }, 1000 / fps);
+    setInterval(function () { update(); }, 1000 / fps);
 });
 
 window.addEventListener("resize", resizeCanvas);
@@ -157,13 +190,13 @@ function onDirtyTable(table) {
     }
 }
 function onFailureState() {
-    for (i=0; i < rawRobots.length; i++) {
+    for (i = 0; i < rawRobots.length; i++) {
         let point = rawRobots[i];
         //let position = new Vector2Scale(point.position.x, point.position.y);
-        if (rawFailureState.position.x == point.position.x && rawFailureState.position.y == point.position.y){
+        if (rawFailureState.position.x == point.position.x && rawFailureState.position.y == point.position.y) {
             console.log("failure has occured");
         }
     }
-   
-    
+
+
 }

@@ -654,6 +654,7 @@ button .iconify {
     height: 60px;
     left: 84px;
     top: -35px;
+    text-decoration: none;
 }
 
 .rt,
@@ -661,6 +662,7 @@ button .iconify {
     font-weight: bold;
     font-size: 16px;
     color: #1A1487;
+    text-decoration: none;
 }
 
 .task_txt li,
@@ -670,6 +672,7 @@ button .iconify {
     color: #1A1487;
     position: relative;
     top: -10px;
+    text-decoration: none;
 }
 
 .scroll_list_t {
@@ -718,6 +721,8 @@ button .iconify {
     left: 28px;
     top: 21px;
     color: #9796D4;
+    text-decoration: none;
+    
 }
 
 

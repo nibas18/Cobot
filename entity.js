@@ -53,6 +53,7 @@ class Behaviour {
     }*/
 
     awake() {}
+    stop() {}
     update() {}
     onEnable() {}
     onDisable() {}
@@ -126,7 +127,8 @@ class Robot extends Behaviour {
 
     awake() {
         this.entity.robot = this;
-    }
+    
+   }
 
     update() {
         switch (this.state) {
@@ -157,13 +159,13 @@ class Robot extends Behaviour {
             default:
                 break;
         }
+        
     }
 
     onActivate(target) {
         this.movement.target = target;
         this.state = state.activated;
     }
-
 }
 
 let dirtyDelay = { min: 3000, max: 16000 }

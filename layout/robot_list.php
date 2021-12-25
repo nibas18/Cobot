@@ -23,7 +23,7 @@
         if ($count > 0) {
             while ($row = mysqli_fetch_array($query)) {
                 $nr = $row['Robotnumber'];
-                echo '<i id="robots"  class="iconify" data-icon="mdi:robot-excited-outline"><a href="../html/robot_status.php?Robots='. $nr.'"></a></i>';
+                echo '<i id="robots"  class="iconify" data-icon="mdi:robot-excited-outline"><a href = "/..html/robot_status.php"></i>';
                 echo '<div class="robot_txt">';
                 echo '<p class="rn">' . $row['Robotnumber'] . ':</p>';
                 echo '<li>Status: ' . $row['Robotstatus'] . '</li>';
