@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database_name = "cobot1";
+$database_name = "cobot";
 
 $database_connection = mysqli_connect($servername, $username, $password, $database_name);
 
