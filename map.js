@@ -16,8 +16,7 @@ let rawFailureState = [{
 // Der skal kun være en robot i vores simulation. 
 let rawRobots = [{
     name: "Robot 1",
-}
-];
+}];
 
 /*
 let zone1 = new Zone(9, 133, 221, 91, {
@@ -43,61 +42,59 @@ let zone4 = new Zone(200, 224, 106, 155, {
 */
 // skal erstattes med zoner, så i stedet for at det er borde som er markeret skal det være zoner.
 
-
 let rawPoints = [{
-    name: "Table 1",
-    position: { x: 0.2, y: 0.7 }
+        name: "Table 1",
+        position: { x: 0.2, y: 0.7 }
 
-},
-{
-    name: "Table 2",
-    position: { x: 0.2, y: 0.5 }
-},
-{
-    name: "Table 3",
-    position: { x: 0.2, y: 0.3 }
-},
-{
-    name: "Table 4",
-    position: { x: 0.2, y: 0.9 }
-},
-{
-    // y 0.5 definerer midten
-    name: "Table 5",
-    position: { x: 0.5, y: 0.7 }
-},
-{
-    name: "Table 6",
-    position: { x: 0.5, y: 0.5 }
-},
-{
-    name: "Table 7",
-    position: { x: 0.5, y: 0.3 }
-},
-{
-    name: "Table 8",
-    position: { x: 0.5, y: 0.9 }
-},
-{
-    name: "Table 9",
-    position: { x: 0.8, y: 0.7 }
-},
-{
-    name: "Table 10",
-    position: { x: 0.8, y: 0.5 }
-},
-{
-    name: "Table 11",
-    position: { x: 0.8, y: 0.3 }
-},
-{
-    name: "Table 12",
-    position: { x: 0.8, y: 0.9 }
-}
+    },
+    {
+        name: "Table 2",
+        position: { x: 0.2, y: 0.5 }
+    },
+    {
+        name: "Table 3",
+        position: { x: 0.2, y: 0.3 }
+    },
+    {
+        name: "Table 4",
+        position: { x: 0.2, y: 0.9 }
+    },
+    {
+        // y 0.5 definerer midten
+        name: "Table 5",
+        position: { x: 0.5, y: 0.7 }
+    },
+    {
+        name: "Table 6",
+        position: { x: 0.5, y: 0.5 }
+    },
+    {
+        name: "Table 7",
+        position: { x: 0.5, y: 0.3 }
+    },
+    {
+        name: "Table 8",
+        position: { x: 0.5, y: 0.9 }
+    },
+    {
+        name: "Table 9",
+        position: { x: 0.8, y: 0.7 }
+    },
+    {
+        name: "Table 10",
+        position: { x: 0.8, y: 0.5 }
+    },
+    {
+        name: "Table 11",
+        position: { x: 0.8, y: 0.3 }
+    },
+    {
+        name: "Table 12",
+        position: { x: 0.8, y: 0.9 }
+    }
 ];
 
-
-$(document).ready(function () {
+$(document).ready(function() {
     canvas = document.getElementById("canvas");
     canvas.style.backgroundColor = "#FFFFFF";
     ctx = canvas.getContext("2d");
@@ -109,7 +106,7 @@ $(document).ready(function () {
     getPoints();
     getRobots();
     resizeCanvas();
-    setInterval(function () { update(); }, 1000 / fps);
+    setInterval(function() { update(); }, 1000 / fps);
 });
 
 window.addEventListener("resize", resizeCanvas);
@@ -149,23 +146,23 @@ function getRobots() {
 
             let robotBrain = new Robot(movement);
             let entity = new Entity(position, [spriteRenderer, movement, robotBrain]);
-            //idlingRobots.push(entity);
+            idlingRobots.push(entity);
             entities.push(entity);
             //entity.awake();
             return entity;
         }
     }
 }
+
 function startRobot() {
     let entity = getRobots();
-    idlingRobots.push(entity);
     entity.awake();
-    //entities.push(entity);
 }
-/*function stopRobot(){
+
+function stopRobot() {
     let entity = getRobots();
-    entity.
-}*/
+    entity.stop();
+}
 
 function getPoints() {
     //Get POIs. Current implementation is only for looks.
@@ -189,6 +186,7 @@ function onDirtyTable(table) {
         robot.robot.onActivate(table);
     }
 }
+
 function onFailureState() {
     for (i = 0; i < rawRobots.length; i++) {
         let point = rawRobots[i];
@@ -197,6 +195,4 @@ function onFailureState() {
             console.log("failure has occured");
         }
     }
-
-
 }

@@ -1,3 +1,4 @@
+<?php require("../database/insert_data.php") ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
