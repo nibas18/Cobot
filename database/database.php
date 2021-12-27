@@ -6,7 +6,7 @@ $password = "";
 //Connect to server:
 $server_connection = mysqli_connect($servername, $username, $password);
 
-$database_name = "cobot1";
+$database_name = "cobot";
 $sql_db = "CREATE DATABASE IF NOT EXISTS $database_name";
 
 //Create a database:
