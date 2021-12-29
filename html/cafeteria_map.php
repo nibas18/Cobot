@@ -19,7 +19,6 @@
 </head>
 
 <body>
-    <img id="table" src="../images/table.png" width="10" height="10"></img>
     <div class="content">
         <?php include("../layout/header.php") ?>
         <div class="wrapper_background_img"></div>

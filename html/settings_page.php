@@ -15,7 +15,7 @@
     <div class="content">
         <div class="header_banner"></div>
         <p class="settings_title">Settings</p>
-        <i id="back_arrow" class="iconify" data-icon="eva:arrow-back-outline"></i>
+        <i id="back_arrow" class="iconify" onclick="javascript:history.go(-1)" data-icon="eva:arrow-back-outline"></i>
 
         <div class="list_settings">
             <div class="account_div">
