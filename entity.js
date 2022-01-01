@@ -52,17 +52,17 @@ class Behaviour {
         }
     }*/
 
-    awake() { }
-    update() { }
-    onEnable() { }
-    onDisable() { }
+    awake() {}
+    stop() {}
+    update() {}
+    onEnable() {}
+    onDisable() {}
+    onMouseClick() {}
+    onMouseEnter() {}
+    onMouseExit() {}
+    onClickOutside() {}
 
-    onMouseClick() { }
-    onMouseEnter() { }
-    onMouseExit() { }
-    onClickOutside() { }
-
-    onDebug() { }
+    onDebug() {}
 }
 
 class SpriteRenderer extends Behaviour {
@@ -127,7 +127,8 @@ class Robot extends Behaviour {
 
     awake() {
         this.entity.robot = this;
-    }
+    
+   }
 
     update() {
         switch (this.state) {
@@ -149,19 +150,22 @@ class Robot extends Behaviour {
                 this.cleaningTimer = this.cleaningTimer - 1000 / fps;
                 if (this.cleaningTimer <= 0) {
                     this.movement.target = restingPoint;
-                    this.state = state.returning;
+                    this.state = state.activated;
+                   
+                    // this.state = state.returning;
                 }
+
                 break;
             default:
                 break;
         }
+        
     }
 
     onActivate(target) {
         this.movement.target = target;
         this.state = state.activated;
     }
-
 }
 
 let dirtyDelay = { min: 3000, max: 16000 }
@@ -190,4 +194,5 @@ class Table extends Behaviour {
         this.isDirty = false;
         this.timer = getRandomFloat(dirtyDelay.min, dirtyDelay.max);
     }
+
 }
