@@ -1,8 +1,8 @@
 # ReadMe File - Important that you read this!!
-** The Application **
-The application is a simple prototype for robot cleaning system. In order to run the code you have to follow the steps below and install program called Xampp.
+**The Application**
+- The application is a simple prototype for robot cleaning system. In order to run the code you have to follow the steps below and install program called Xampp.
 ---
-** Steps in installing and the running the app **
+**Steps in installing and the running the app**
 1) Dowload and Install Xampp - https://www.apachefriends.org/index.html
 (If problems start to emerge with the program, I would suggest install an older version.)
 
