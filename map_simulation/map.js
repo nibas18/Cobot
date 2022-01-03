@@ -146,7 +146,7 @@ function getRobots() {
 
             let robotBrain = new Robot(movement);
             let entity = new Entity(position, [spriteRenderer, movement, robotBrain]);
-            //idlingRobots.push(entity);
+            idlingRobots.push(entity);
             entities.push(entity);
             //entity.awake();
             return entity;

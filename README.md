@@ -15,3 +15,6 @@
 (Cobot because that is name of the folder containing the app. If the name is changed or the extra has been include, then those changes also needs to made in the url accordingly for it to be the real path.)
 
 Follow these steps and the app/code should run as expected.
+---
+**Another important note!**
+- In order to login you'll be need the mobil number of the registered user-account. One registered number you can use is: 36473888.

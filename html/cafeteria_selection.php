@@ -12,9 +12,7 @@
     <body>
 
     <div class="content">
-        <div class="header">
-            <i id="back" class="iconify" data-icon="eva:arrow-ios-back-outline"></i>
-        </div>
+        <?php include("../layout/header2.php") ?>
         <div class="select_caf_p"><p>Select a Cafeteria</p></div>
         
         <div class="tek_caf">
@@ -29,10 +27,7 @@
             <img id="sm" class="small_img" onclick="smallcafFunction()" src="../images/small_cafeteria_img.png" width="167px" height="122px">
             <p>The Small Cafeteria</p>
         </div>
-        
-        <!--<button class="select_btn" onclick="selectCafeteria()">Select</button>!-->
-
-        
+                
         <div class="line"></div>
     </div>
 

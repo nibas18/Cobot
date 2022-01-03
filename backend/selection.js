@@ -1,6 +1,14 @@
 function tekcafFunction() {
-    console.log("he");
-    //document.getElementsById("tek").style.borderColor = "#2DE1CC";
-    document.getElementById("tek").style.borderColor = "#2DE1CC";
+    console.log("The tek cafeteria has been selected.");
+    window.location.href = "../html/cafeteria_map.php";
+}
+
+function bigcafFunction() {
+    console.log("The big cafeteria has been selected.");
+    window.location.href = "../html/cafeteria_map.php";
+}
+
+function smallcafFunction() {
+    console.log("The small cafeteria has been selected.");
     window.location.href = "../html/cafeteria_map.php";
 }
