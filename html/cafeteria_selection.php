@@ -29,10 +29,7 @@
             <img id="sm" class="small_img" onclick="smallcafFunction()" src="../images/small_cafeteria_img.png" width="167px" height="122px">
             <p>The Small Cafeteria</p>
         </div>
-        
-        <!--<button class="select_btn" onclick="selectCafeteria()">Select</button>!-->
-
-        
+                
         <div class="line"></div>
     </div>
 

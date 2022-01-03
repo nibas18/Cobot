@@ -21,7 +21,6 @@
         <div class="wrapper_background_img"></div>
 
         <div class="map_caf">
-
             <canvas id="canvas" width="308" height="447" style="border: 1px solid #000000"></canvas>
             <button id="start_btn" onclick="startRobot()">Start</button>
             <!-- <button id="stop_btn" onclick="stopRobot()">Stop</button>

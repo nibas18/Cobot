@@ -1,6 +1,5 @@
 <?php
 session_start();
-//require("../backend/loginsystem.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +10,6 @@ session_start();
     <link rel="stylesheet" href="../css_style/stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Pathway Gothic One' rel='stylesheet'>
-    <!--<link href="../backend/loginsystem.php" rel="stylesheet">!-->
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 </head>
 
@@ -26,7 +24,6 @@ session_start();
             echo '<div class="personal_id">Personal ID: ' . $_SESSION['Personalid'] . '</div>';
         }
         ?>
-        <!--<div class="personal_id">Personal ID: <?php /*echo '' . $_SESSION["Personalid"] . ''; */ ?> </div>!-->
 
         <div class="btn_list">
             <button class="schedule_btn">

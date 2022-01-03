@@ -31,7 +31,6 @@ session_start();
             if (isset($_SESSION["error"])) {
                 $error = $_SESSION["error"];
                 echo'<p class="error_text">'. $_SESSION["error"] .'</p>';
-                //echo "<span>$error</span>";
             }
             ?>
         </form>

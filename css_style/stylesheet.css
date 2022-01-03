@@ -24,12 +24,6 @@ body {
     position: fixed;
     top: 0%;
     left: 36%;
-    /*margin-left: auto;
-    margin-right: auto;
-	position:absolute;
-	left: 754px;
-	top: 75px;
-	*/
 }
 
 .homepage {
@@ -40,12 +34,10 @@ body {
     top: -3px;
 }
 
-.hp1 {
+.cs_content {
     width: 378px;
     height: 812px;
     position: absolute;
-    left: 0px;
-    top: 3px;
     border-top-left-radius: 22px;
     border-top-right-radius: 22px;
     border-bottom-left-radius: 22px;
@@ -518,6 +510,20 @@ button .iconify {
     height: 70px;
     position: absolute;
     top: 200px;
+}
+
+#start_btn {
+    background-color: #1A1487;
+    border: 2px solid #1A1487;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    position: fixed;
+    left: 54px;
+    bottom: -65px;
+    cursor: pointer;
 }
 
 
