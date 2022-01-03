@@ -12,9 +12,7 @@
     <body>
 
     <div class="content">
-        <div class="header">
-            <i id="back" class="iconify" data-icon="eva:arrow-ios-back-outline"></i>
-        </div>
+        <?php include("../layout/header2.php") ?>
         <div class="select_caf_p"><p>Select a Cafeteria</p></div>
         
         <div class="tek_caf">
