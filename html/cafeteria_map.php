@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Cafeteria Map</title>
@@ -10,14 +9,12 @@
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <script src="../backend/menu.js"></script>
     <link href="../database/db_connection.php">
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../utilities.js"></script>
-    <script src="../entity.js"></script>
-    <script src="../map.js"></script>
+    <script src="../map_simulation/utilities.js"></script>
+    <script src="../map_simulation/entity.js"></script>
+    <script src="../map_simulation/map.js"></script>
 
 </head>
-
 <body>
     <div class="content">
         <?php include("../layout/header.php") ?>
@@ -27,11 +24,8 @@
 
             <canvas id="canvas" width="308" height="447" style="border: 1px solid #000000"></canvas>
             <button id="start_btn" onclick="startRobot()">Start</button>
-            <button id="stop_btn" onclick="stopRobot()">Stop</button>
-
-           <!-- <script src="zones.js">-->
-
-            </script>
+            <!-- <button id="stop_btn" onclick="stopRobot()">Stop</button>
+            <script src="zones.js"></script>-->
 
            <script>
                /* let zone1 = new Zone(9, 133, 221, 91, { table1: [20, 30, 30, 28], table2: [100, 30, 30, 28], table3: [170, 30, 30, 28] })
@@ -65,8 +59,8 @@
         </div>
         <?php
             include("../layout/below_menu.php");
-            include("../layout/task_list.php");
-            include("../layout/robot_list.php");
+            require("../layout/task_list.php");
+            require("../layout/robot_list.php");
         ?>
     </div>
 
